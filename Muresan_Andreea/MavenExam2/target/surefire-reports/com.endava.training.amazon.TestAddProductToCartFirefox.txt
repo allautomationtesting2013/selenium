@@ -1,0 +1,63 @@
+-------------------------------------------------------------------------------
+Test set: com.endava.training.amazon.TestAddProductToCartFirefox
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 50.433 sec <<< FAILURE!
+testAddToCart(com.endava.training.amazon.TestAddProductToCartFirefox)  Time elapsed: 50.063 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"id","selector":"twotabsearchtextbox"}
+Command duration or timeout: 559 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.38.0', revision: 'bd32d4e7247a32d801b3d2d4f84a4e7384300378', time: '2013-12-05 09:01:37'
+System info: host: 'EN60748', ip: '192.168.104.45', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.6.0_45'
+Session ID: 314303e0-3941-4f46-8bd3-88d6282ebb74
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{platform=XP, acceptSslCerts=true, javascriptEnabled=true, browserName=firefox, rotatable=false, locationContextEnabled=true, version=24.0, cssSelectorsEnabled=true, databaseEnabled=true, handlesAlerts=true, browserConnectionEnabled=true, nativeEvents=false, webStorageEnabled=true, applicationCacheEnabled=true, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:39)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:27)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:513)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:554)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:307)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:348)
+	at org.openqa.selenium.By$ById.findElement(By.java:220)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:299)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:59)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:34)
+	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
+	at com.endava.training.amazon.TestAddProductToCartFirefox.testAddToCart(TestAddProductToCartFirefox.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.internal.runners.TestMethodRunner.executeMethodBody(TestMethodRunner.java:99)
+	at org.junit.internal.runners.TestMethodRunner.runUnprotected(TestMethodRunner.java:81)
+	at org.junit.internal.runners.BeforeAndAfterRunner.runProtected(BeforeAndAfterRunner.java:34)
+	at org.junit.internal.runners.TestMethodRunner.runMethod(TestMethodRunner.java:75)
+	at org.junit.internal.runners.TestMethodRunner.run(TestMethodRunner.java:45)
+	at org.junit.internal.runners.TestClassMethodsRunner.invokeTestMethod(TestClassMethodsRunner.java:71)
+	at org.junit.internal.runners.TestClassMethodsRunner.run(TestClassMethodsRunner.java:35)
+	at org.junit.internal.runners.TestClassRunner$1.runUnprotected(TestClassRunner.java:42)
+	at org.junit.internal.runners.BeforeAndAfterRunner.runProtected(BeforeAndAfterRunner.java:34)
+	at org.junit.internal.runners.TestClassRunner.run(TestClassRunner.java:52)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:53)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
+Caused by: org.openqa.selenium.remote.ErrorHandler$UnknownServerException: Unable to locate element: {"method":"id","selector":"twotabsearchtextbox"}
+Build info: version: '2.38.0', revision: 'bd32d4e7247a32d801b3d2d4f84a4e7384300378', time: '2013-12-05 09:01:37'
+System info: host: 'EN60748', ip: '192.168.104.45', os.name: 'Windows 8', os.arch: 'amd64', os.version: '6.2', java.version: '1.6.0_45'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/ANMURE~1/AppData/Local/Temp/anonymous7711369817270448786webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8860)
+	at <anonymous class>.FirefoxDriver.prototype.findElement(file:///C:/Users/ANMURE~1/AppData/Local/Temp/anonymous7711369817270448786webdriver-profile/extensions/fxdriver@googlecode.com/components/driver_component.js:8869)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/ANMURE~1/AppData/Local/Temp/anonymous7711369817270448786webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10831)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_(file:///C:/Users/ANMURE~1/AppData/Local/Temp/anonymous7711369817270448786webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10836)
+	at <anonymous class>.DelayedCommand.prototype.execute/<(file:///C:/Users/ANMURE~1/AppData/Local/Temp/anonymous7711369817270448786webdriver-profile/extensions/fxdriver@googlecode.com/components/command_processor.js:10778)
