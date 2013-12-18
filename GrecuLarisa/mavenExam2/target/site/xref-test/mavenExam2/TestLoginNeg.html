@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>TestLoginNeg xref</title>
+<link type="text/css" rel="stylesheet" href="../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../testapidocs/mavenExam2/TestLoginNeg.html">View Javadoc</a></div><pre>
+
+<a class="jxr_linenumber" name="1" href="#1">1</a>   <strong class="jxr_keyword">package</strong> mavenExam2;
+<a class="jxr_linenumber" name="2" href="#2">2</a>   
+<a class="jxr_linenumber" name="3" href="#3">3</a>   <strong class="jxr_keyword">import</strong> org.junit.Assert;
+<a class="jxr_linenumber" name="4" href="#4">4</a>   <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="5" href="#5">5</a>   <strong class="jxr_keyword">import</strong> org.openqa.selenium.By;
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <strong class="jxr_keyword">import</strong> org.openqa.selenium.support.PageFactory;
+<a class="jxr_linenumber" name="7" href="#7">7</a>   
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <strong class="jxr_keyword">import</strong> util.BrowserSett;
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <strong class="jxr_keyword">import</strong> util.PageReg;
+<a class="jxr_linenumber" name="10" href="#10">10</a>  
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <em class="jxr_javadoccomment"> * @author larisa the class calls the method 'LoginFail'</em>
+<a class="jxr_linenumber" name="14" href="#14">14</a>  <em class="jxr_javadoccomment"> * @parameters: three constants for URL and credentials of the user</em>
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="16" href="#16">16</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="17" href="#17">17</a>  
+<a class="jxr_linenumber" name="18" href="#18">18</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../mavenExam2/TestLoginNeg.html">TestLoginNeg</a> <strong class="jxr_keyword">extends</strong> <a href="../util/BrowserSett.html">BrowserSett</a> {
+<a class="jxr_linenumber" name="19" href="#19">19</a>  
+<a class="jxr_linenumber" name="20" href="#20">20</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String AMAZON_URL = <span class="jxr_string">"https://www.amazon.com/ap/signin?_encoding=UTF8&amp;openid.assoc_handle=usflex&amp;openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&amp;openid.mode=checkid_setup&amp;openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&amp;openid.ns.pape=http%3A%2F%2Fspecs.openid.net%2Fextensions%2Fpape%2F1.0&amp;openid.pape.max_auth_age=0&amp;openid.return_to=https%3A%2F%2Fwww.amazon.com%2Fgp%2Fyourstore%2Fhome%3Fie%3DUTF8%26action%3Dsign-out%26path%3D%252Fgp%252Fyourstore%252Fhome%26ref_%3Dgno_signout%26signIn%3D1%26useRedirectOnSuccess%3D1"</span>;
+<a class="jxr_linenumber" name="21" href="#21">21</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> CharSequence EMAIL = <span class="jxr_string">"ioa@ioa.com"</span>;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> CharSequence PASSWORD = <span class="jxr_string">"311289"</span>;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  
+<a class="jxr_linenumber" name="24" href="#24">24</a>  	<em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="25" href="#25">25</a>  <em class="jxr_javadoccomment">	 * the method tests if an error message is displayed when the user enters</em>
+<a class="jxr_linenumber" name="26" href="#26">26</a>  <em class="jxr_javadoccomment">	 * wrong credentials</em>
+<a class="jxr_linenumber" name="27" href="#27">27</a>  <em class="jxr_javadoccomment">	 * </em>
+<a class="jxr_linenumber" name="28" href="#28">28</a>  <em class="jxr_javadoccomment">	 * @throws InterruptedException</em>
+<a class="jxr_linenumber" name="29" href="#29">29</a>  <em class="jxr_javadoccomment">	 */</em>
+<a class="jxr_linenumber" name="30" href="#30">30</a>  
+<a class="jxr_linenumber" name="31" href="#31">31</a>  	@Test
+<a class="jxr_linenumber" name="32" href="#32">32</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> LoginFail() <strong class="jxr_keyword">throws</strong> InterruptedException {
+<a class="jxr_linenumber" name="33" href="#33">33</a>  		driver.get(AMAZON_URL);
+<a class="jxr_linenumber" name="34" href="#34">34</a>  		<strong class="jxr_keyword">new</strong> PageFactory();
+<a class="jxr_linenumber" name="35" href="#35">35</a>  		<strong class="jxr_keyword">final</strong> <a href="../util/PageReg.html">PageReg</a> login = PageFactory.initElements(driver, PageReg.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="36" href="#36">36</a>  		login.emailInput.sendKeys(EMAIL);
+<a class="jxr_linenumber" name="37" href="#37">37</a>  		login.radioBInput.click();
+<a class="jxr_linenumber" name="38" href="#38">38</a>  		login.passwInput.sendKeys(PASSWORD);
+<a class="jxr_linenumber" name="39" href="#39">39</a>  		login.submittBInput.click();
+<a class="jxr_linenumber" name="40" href="#40">40</a>  		Thread.sleep(5000);
+<a class="jxr_linenumber" name="41" href="#41">41</a>  		Assert.assertTrue(driver
+<a class="jxr_linenumber" name="42" href="#42">42</a>  				.findElement(By.xpath(<span class="jxr_string">"/html/body/div/div[2]/div[3]/div/h6"</span>))
+<a class="jxr_linenumber" name="43" href="#43">43</a>  				.getText().equals(<span class="jxr_string">"There was a problem with your request"</span>));
+<a class="jxr_linenumber" name="44" href="#44">44</a>  	}
+<a class="jxr_linenumber" name="45" href="#45">45</a>  
+<a class="jxr_linenumber" name="46" href="#46">46</a>  }
+</pre>
+<hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
+</html>
+
